@@ -18,7 +18,7 @@ app.use(express.json())
 app.use("/api/auth", router)
 app.use("/api/cart", cartRouter)
 app.use("/api/stripe", stripeRouter)
-app.use("/api/auth/hello", (req, res) => {
+app.use("/api/hello", (req, res) => {
     res.send("<h1>Hello World</h1>")
 })
 connectToDb()
