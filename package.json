@@ -1,0 +1,62 @@
+{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "name": "we_wear_backend",
+  "version": "1.0.0",
+  "description": "a online e-commerece app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "]"
+  ],
+  "author": "",
+=======
+>>>>>>> 00cbd2bcb15bb78002e67b2825bd5d732a7c4d98
+  "name": "backendexpress",
+  "version": "1.0.0",
+  "description": "some some what",
+  "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jk",
+<<<<<<< HEAD
+=======
+>>>>>>> c4931808740bc6e2773cbdb27ede467e77ed3f0e
+>>>>>>> 00cbd2bcb15bb78002e67b2825bd5d732a7c4d98
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 00cbd2bcb15bb78002e67b2825bd5d732a7c4d98
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+<<<<<<< HEAD
+=======
+=======
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3",
+    "stripe": "^14.16.0",
+    "vercel": "^33.5.0"
+>>>>>>> c4931808740bc6e2773cbdb27ede467e77ed3f0e
+>>>>>>> 00cbd2bcb15bb78002e67b2825bd5d732a7c4d98
+  }
+}
