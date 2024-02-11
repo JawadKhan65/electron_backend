@@ -10,7 +10,7 @@ import stripeRouter from "./routes/stripe.js";
 
 const app = express()
 app.use(cors({
-    origin: ["https://electron-backend.vercel.app"],
+    origin: ["https://ecommerce-electron.vercel.app"],
     methods: ["POST", "PUT", "DELETE", "GET"],
     credentials: true
 }))
