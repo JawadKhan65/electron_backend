@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-const express = require("express")
-const connectDB = require("./db")
-const app = express()
-const port = 8000
-const cors = require("cors")
-connectDB()
-
-app.use(cors())
-
-app.use(express.json())
-
-app.use("/api/auth", require("./routes/auth"))
-app.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}`)
-})
-
-=======
 import express from "express";
 import connectToDb from "./db.js"
 import cors from "cors"
@@ -38,4 +20,3 @@ app.use("/api/cart", cartRouter)
 app.use("/api/stripe", stripeRouter)
 connectToDb()
 export default app;
->>>>>>> c4931808740bc6e2773cbdb27ede467e77ed3f0e

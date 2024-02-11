@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-const mongoose = require("mongoose")
-
-const uri = "mongodb://127.0.0.1:27017/JAMSTACK"
-
-
-const connectDB = () => {
-    mongoose.connect(uri)
-        .then(() => {
-            console.log("Connected to db", "Host", mongoose.connection.host)
-        })
-        .catch((err) => {
-            console.log(`Failed to connect to MongoDB: `, err)
-            process.exit(1)
-        })
-}
-module.exports = connectDB
-=======
 import mongoose from 'mongoose';
 import User from './model/userSchema.model.js';
 import bcrypt from 'bcryptjs';
@@ -71,4 +53,3 @@ mongoose.connection.once('open', () => {
 });
 
 export default connectToDB;
->>>>>>> c4931808740bc6e2773cbdb27ede467e77ed3f0e

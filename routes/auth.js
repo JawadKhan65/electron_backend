@@ -1,27 +1,24 @@
-const express = require("express")
-const { Login, createUser, getUser } = require("../controllers/authControll");
-const { fetchuser } = require("../middlewares/fetchuser");
+import express from 'express';
+import { body } from 'express-validator';
+import { Login, createUser, getUser } from '../controllers/authControll.js';
+import fetchUser from '../middlewares/fetchuser.js';
+import User from '../models/Users.model.js';
 
-const User = require("../models/Users.model")
-const router = express.Router()
-const { body } = require('express-validator');
+const router = express.Router();
 
+router.route('/login', [
+    body('email', 'Enter a valid Email').isEmail(),
+    body('password', 'Enter a valid password').exists(),
+]).post(Login);
 
-router.route("/login", [
-
-    body("email", "Enter a valid Email").isEmail(),
-    body("password", "Enter a valid password").exists()
-
-]).post(Login)
-
-router.route("/signup", [
-    body("name", "Enter a valid name").isLength({
-        min: 3
+router.route('/signup', [
+    body('name', 'Enter a valid name').isLength({
+        min: 3,
     }),
-    body("email", "Enter a valid Email").isEmail(),
-    body("password", "Enter a valid password").exists()
-]).post(createUser)
+    body('email', 'Enter a valid Email').isEmail(),
+    body('password', 'Enter a valid password').exists(),
+]).post(createUser);
 
-router.route("/getuser", fetchuser).get(getUser)
+router.route('/getuser').get(fetchuser, getUser);
 
-module.exports = router
+export default router;

@@ -1,6 +1,6 @@
 import express from "express";
 import { body } from "express-validator"
-import { fetchUser } from "../middlewares/fetchUser.js"
+import fetchuser from "../middlewares/fetchuser.js"
 import { Login, SignUp, deleteUser, getUser, updateProfile } from "../controllers/userControllers.js"
 const router = express.Router()
 
@@ -27,13 +27,13 @@ router.route("/login", [
 
 
 // Delete Route
-router.route("/deleteUser/:id").delete(fetchUser, deleteUser)
+router.route("/deleteUser/:id").delete(fetchuser, deleteUser)
 
 // Update Route
 router.route("/updateProfile/:id", [
     body("password", "Enter valid password").exists(),
 
 ]).put(fetchUser, updateProfile)
-router.route("/getUser/:id").post(fetchUser, getUser)
+router.route("/getUser/:id").post(fetchuser, getUser)
 
 export default router

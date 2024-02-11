@@ -1,6 +1,6 @@
 import { body } from "express-validator";
 import express from "express";
-import { fetchUser } from "../middlewares/fetchUser.js";
+import fetchuser from "../middlewares/fetchuser.js";
 import { addToCart, adminOrders, deletefromCart, editOrderStatus, getItems } from "../controllers/cartControllers.js";
 import { FetchRole } from "../middlewares/fetchDuplicate.js";
 const cartRouter = express.Router()
@@ -9,9 +9,9 @@ cartRouter.route("/addtoCart", [
     body("name", "Must be something with name").exists(),
     body("price", "Enter Price").exists(),
     body("quantity", "Enter quantity").exists()
-]).post(fetchUser, addToCart)
+]).post(fetchuser, addToCart)
 
-cartRouter.route("/getItems").post(fetchUser, getItems)
+cartRouter.route("/getItems").post(fetchuser, getItems)
 cartRouter.route("/deleteItem/:id").delete(fetchUser, deletefromCart)
 
 
