@@ -26,9 +26,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json())
-app.use("/", (req, res) => {
-    res.send("<h1>Hello World</h1>")
-})
+
 app.use("/api/auth", router)
 app.use("/api/cart", cartRouter)
 app.use("/stripe", stripeRouter)
