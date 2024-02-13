@@ -18,12 +18,12 @@ app.use(express.json())
 app.use("/", (req, res) => {
     res.send("<h1>Hello World</h1>")
 })
-app.use("/api/auth", router)
-app.use("/api/cart", cartRouter)
-app.use("/api/stripe", stripeRouter)
+app.use("/auth", router)
+app.use("/cart", cartRouter)
+app.use("/stripe", stripeRouter)
 
 connectToDb()
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
     console.log("listening at 8000")
 })
 export default app;
