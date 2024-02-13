@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const uri = process.env.URI;
+const uri = process.env.uri;
 
 const connectToDB = async () => {
     try {
