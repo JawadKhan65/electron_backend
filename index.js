@@ -9,7 +9,11 @@ import cartRouter from "./routes/cartRoutes.js";
 import stripeRouter from "./routes/stripe.js";
 
 const app = express()
-
+app.use(cors({
+    origin: ["https://ecommerce-electron.vercel.app"],
+    methods: ["POST", "PUT", "DELETE", "GET"],
+    credentials: true
+}))
 app.use(express.json())
 app.use("/", (req, res) => {
     res.send("<h1>Hello World</h1>")
