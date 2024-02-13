@@ -12,7 +12,7 @@ cartRouter.route("/addtoCart", [
 ]).post(fetchuser, addToCart)
 
 cartRouter.route("/getItems").post(fetchuser, getItems)
-cartRouter.route("/deleteItem/:id").delete(fetchUser, deletefromCart)
+cartRouter.route("/deleteItem/:id").delete(fetchuser, deletefromCart)
 
 
 // route where admin will be able to see orders

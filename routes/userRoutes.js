@@ -33,7 +33,7 @@ router.route("/deleteUser/:id").delete(fetchuser, deleteUser)
 router.route("/updateProfile/:id", [
     body("password", "Enter valid password").exists(),
 
-]).put(fetchUser, updateProfile)
+]).put(fetchuser, updateProfile)
 router.route("/getUser/:id").post(fetchuser, getUser)
 
 export default router

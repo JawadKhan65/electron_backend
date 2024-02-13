@@ -9,8 +9,7 @@ const uri = process.env.URI;
 const connectToDB = async () => {
     try {
         await mongoose.connect(uri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+
         });
         console.log(`Connected to MongoDB at ${mongoose.connection.host}`);
         await initializeAdminUser();
