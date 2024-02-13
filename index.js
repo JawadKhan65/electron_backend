@@ -23,4 +23,7 @@ app.use("/api/cart", cartRouter)
 app.use("/api/stripe", stripeRouter)
 
 connectToDb()
+app.listen(8000, () => {
+    console.log("listening at 8000")
+})
 export default app;
