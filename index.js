@@ -26,4 +26,4 @@ connectToDb()
 app.listen(process.env.PORT, () => {
     console.log("listening at 8000")
 })
-export default app;
+
