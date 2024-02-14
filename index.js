@@ -9,21 +9,15 @@ import cartRouter from "./routes/cartRoutes.js";
 import stripeRouter from "./routes/stripe.js";
 
 const app = express()
-const corsOptions = {
-    origin: function (origin, callback) {
-        // Check if the origin is allowed
-        const allowedOrigins = ['https://ecommerce-electron.vercel.app', 'https://another-allowed-origin.com'];
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    methods: ['POST', 'PUT', 'DELETE', 'GET'],
-    credentials: true,
-};
 
-app.use(cors(corsOptions));
+
+app.use(
+    cors({
+        origin: "*", // Allow requests from any origin
+        methods: ["POST", "PUT", "DELETE"],
+        credentials: true,
+    })
+);
 
 app.use(express.json())
 
