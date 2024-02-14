@@ -29,7 +29,7 @@ app.use(express.json())
 
 app.use("/api/auth", router)
 app.use("/api/cart", cartRouter)
-app.use("/stripe", stripeRouter)
+app.use("/api/stripe", stripeRouter)
 
 connectToDb()
 app.listen(process.env.PORT, () => {
