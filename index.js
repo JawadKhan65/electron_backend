@@ -11,13 +11,12 @@ import stripeRouter from "./routes/stripe.js";
 const app = express()
 
 
-app.use(
-    cors({
-        origin: "*", // Allow requests from any origin
-        methods: ["POST", "PUT", "DELETE"],
-        credentials: true,
-    })
-);
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
+    credentials: true
+}))
 
 app.use(express.json())
 
