@@ -1,7 +1,8 @@
 
-
+import dotenv from "dotenv"
+dotenv.config()
 import jwt from "jsonwebtoken"
-const JWT_SECRET = "jawadisagoodboy";
+const JWT_SECRET = process.env.SECRET;
 
 
 const fetchuser = (req, res, next) => {
