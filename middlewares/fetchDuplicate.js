@@ -4,7 +4,7 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-const secret = process.env.secret
+const secret = process.env.SECRET
 
 const FetchRole = (req, res, next) => {
     // fetch token
